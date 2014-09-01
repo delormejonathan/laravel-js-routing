@@ -51,6 +51,13 @@ And import routes file dynamically in local and statically in production :
 @endif
 ```
 
+Now, you can use it in JavaScript :
+
+```javascript
+JSRouter.action('UsersController@edit', { id : 5 });
+JSRouter.route('mycustomroutename');
+```
+
 Don't forget to export routes in production. You can add a custom path right after the 'dump' word. Default path is : public/js/routes.js
 
 ```php
