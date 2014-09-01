@@ -1,0 +1,25 @@
+{
+    "name": "delormejonathan/laravel-js-routing",
+    "description": "Laravel 4 package to access Routing from Javascript",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Jonathan DELORME",
+            "email": "delorme.jonathan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "DelormeJonathan\\LaravelJsRouting\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
