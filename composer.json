@@ -2,7 +2,7 @@
     "name": "delormejonathan/laravel-js-routing",
     "description": "Laravel 4 package to access Routing from Javascript",
     "license": "MIT",
-    "version": "1.0.1",
+    "keywords": ["laravel", "routing"],
     "authors": [
         {
             "name": "Jonathan DELORME",
@@ -10,8 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-0": {
