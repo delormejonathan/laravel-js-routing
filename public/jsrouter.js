@@ -5,6 +5,10 @@ var JSRouter = {
 	base_path : '',
 
 	action : function(name, parameters) {
+		if (! parameters) {
+			parameters = [];
+		}
+
 		if (this.routesByAction instanceof Array || this.routesByName instanceof Array) {
 			console.error(this.package + 'No routes detected.');
 			return '';
@@ -33,6 +37,10 @@ var JSRouter = {
 	},
 
 	route : function(name, parameters) {
+		if (! parameters) {
+			parameters = [];
+		}
+
 		if (this.routesByName instanceof Array || this.routesByName instanceof Array) {
 			console.error(this.package + 'No routes detected.');
 			return '';
