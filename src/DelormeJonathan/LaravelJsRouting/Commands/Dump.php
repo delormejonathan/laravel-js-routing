@@ -1,4 +1,4 @@
-<?php namespace DelormeJonathan\LaravelJsRouting;
+<?php namespace DelormeJonathan\LaravelJsRouting\Commands;
 
 use DelormeJonathan\LaravelJsRouting\JSRouter;
 use Illuminate\Console\Command;
