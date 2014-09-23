@@ -19,7 +19,7 @@ var JSRouter = {
 			return '';
 		}
 
-		var selected = this.routesByAction[name];
+		var selected = JSON.parse(JSON.stringify(this.routesByAction[name]));
 		var param = null;
 
 		for (var key in selected.parameters) {
@@ -51,7 +51,7 @@ var JSRouter = {
 			return '';
 		}
 
-		var selected = this.routesByName[name];
+		var selected = JSON.parse(JSON.stringify(this.routesByName[name]));
 		var param = null;
 
 		for (var key in selected.parameters) {
