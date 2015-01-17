@@ -54,8 +54,8 @@ And import routes file dynamically in local and statically in production :
 Now, you can use it in JavaScript :
 
 ```javascript
-JSRouter.action('UsersController@edit', { id : 5 });
-JSRouter.route('mycustomroutename');
+JSRouter.action('UsersController@edit', { id : 5 }); // For routes without a name
+JSRouter.route('mycustomroutename'); // For routes with a name
 ```
 
 Don't forget to export routes in production. You can add a custom path right after the 'dump' word. Default path is : public/js/routes.js
@@ -77,6 +77,18 @@ php artisan config:publish delormejonathan/laravel-js-routing
 ```
 
 Then modify it in app/config/packages.
+
+## Common issues
+
+**Browser console report "No routes detected"**
+
+Make sure you have at least one route with a name or a controller in your routes.php.
+
+**I added a route to Laravel and the JSRouter doesn't see it**
+
+If you are in production environment, remember to export your routes with *php artisan laravel-js-routing:dump* when you change your routes.php
+
+If you are in local environment, remember that your route needs to point to a controller. It can have a name (optional). This package doesn't work with Closure routes.
 
 ## Contribution & improvements
 
