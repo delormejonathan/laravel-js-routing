@@ -9,7 +9,7 @@ var JSRouter = {
 			parameters = [];
 		}
 
-		if (this.routesByAction instanceof Array || this.routesByName instanceof Array) {
+		if (this.routesByAction instanceof Array) {
 			console.error(this.package + 'No routes detected.');
 			return '';
 		}
@@ -19,7 +19,7 @@ var JSRouter = {
 			return '';
 		}
 
-		var selected = this.routesByAction[name];
+		var selected = JSON.parse(JSON.stringify(this.routesByAction[name]));
 		var param = null;
 
 		for (var key in selected.parameters) {
@@ -41,7 +41,7 @@ var JSRouter = {
 			parameters = [];
 		}
 
-		if (this.routesByName instanceof Array || this.routesByName instanceof Array) {
+		if (this.routesByName instanceof Array) {
 			console.error(this.package + 'No routes detected.');
 			return '';
 		}
@@ -51,7 +51,7 @@ var JSRouter = {
 			return '';
 		}
 
-		var selected = this.routesByName[name];
+		var selected = JSON.parse(JSON.stringify(this.routesByName[name]));
 		var param = null;
 
 		for (var key in selected.parameters) {
