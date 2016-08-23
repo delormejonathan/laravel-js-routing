@@ -12,11 +12,11 @@ class JSRouter
 
 		foreach ($router as $route) {
 			if ($route->getActionName() != 'Closure') {
-				$routesByAction[$route->getActionName()]['route'] = str_replace('?}', '}', url($route->getPath()));
+				$routesByAction[$route->getActionName()]['route'] = str_replace('?}', '}', action($route->getActionName()));
 				$routesByAction[$route->getActionName()]['parameters'] = $route->parameterNames();
 			}
 			if ($route->getName() != '') {
-				$routesByName[$route->getName()]['route'] = str_replace('?}', '}', url($route->getPath()));
+				$routesByName[$route->getName()]['route'] = str_replace('?}', '}', route($route->getName()));
 				$routesByName[$route->getName()]['parameters'] = $route->parameterNames();
 			}
 		}
