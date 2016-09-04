@@ -21,7 +21,7 @@ class Dump extends Command {
 	protected function getArguments()
 	{
 		return array(
-			array('path', InputArgument::OPTIONAL, 'Path', 'public/js/routes.js'),
+			array('path', InputArgument::OPTIONAL, 'Path', public_path ('js/routes.js')),
 		);
 	}
 }
