@@ -22,6 +22,6 @@ class JSRouter
 		}
 
 
-		return View::make('LaravelJsRouting::script', array('routesByAction' => json_encode($routesByAction), 'routesByName' => json_encode($routesByName)));
+		return View::make('LaravelJsRouting::script', array('routesByAction' => $routesByAction, 'routesByName' => $routesByName));
 	}
 }
