@@ -19,7 +19,10 @@ class LaravelJsRoutingServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('delormejonathan/laravel-js-routing', 'LaravelJsRouting');
+		$this->publishes([
+			__DIR__.'/../../../public' => resource_path ('assets/vendor/laravel-js-routing'),
+		], 'public');
+		$this->loadViewsFrom(__DIR__.'/../../views', 'LaravelJsRouting');
 		$this->commands('dump');
 	}
 

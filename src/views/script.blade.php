@@ -1,3 +1,3 @@
-JSRouter.routesByAction = {{ $routesByAction }}
+JSRouter.routesByAction = {!! json_encode ($routesByAction) !!}
 
-JSRouter.routesByName = {{ $routesByName }}
+JSRouter.routesByName = {!! json_encode ($routesByName) !!}
