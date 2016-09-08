@@ -6,7 +6,9 @@ The main feature is the possibility to use it easily in local and production env
 
 In local environment, the JS routes are re-written each request. In production environment, the JS routes are dumped in a static file for better performance.
 
-## Installation Laravel 5
+If you're using Laravel 4, please read this documentation : [Laravel 4 README](https://github.com/delormejonathan/laravel-js-routing/tree/5fcf8e1aac3c36c14262191452451565717738f1)
+
+## Installation
 
 Add this line to your **composer.json** and run `composer update`
 
@@ -14,48 +16,22 @@ Add this line to your **composer.json** and run `composer update`
 "delormejonathan/laravel-js-routing": "~2.0"
 ```
 
-Add the provider to **app.php** to the **aliases** section
+Add the provider to **app.php** to the **providers** section
 
 ```
-'DelormeJonathan\LaravelJsRouting\LaravelJsRoutingServiceProvider',
+DelormeJonathan\LaravelJsRouting\LaravelJsRoutingServiceProvider::class,
 ```
 
 Add the facade to **app.php** to the **aliases** section
 
 ```
-'JSRouter' => 'DelormeJonathan\LaravelJsRouting\Facades\JSRouter',
+'JSRouter' => DelormeJonathan\LaravelJsRouting\Facades\JSRouter::class,
 ```
 
 Publish assets to public folder
 
 ```
 php artisan vendor:publish --tag=public --force
-```
-
-## Installation Laravel 4
-
-Add this line to your **composer.json** and run `composer update`
-
-```
-"delormejonathan/laravel-js-routing": "~1.0"
-```
-
-Add the provider to **app.php** to the **aliases** section
-
-```
-'DelormeJonathan\LaravelJsRouting\LaravelJsRoutingServiceProvider',
-```
-
-Add the facade to **app.php** to the **aliases** section
-
-```
-'JSRouter' => 'DelormeJonathan\LaravelJsRouting\Facades\JSRouter',
-```
-
-Publish assets to public folder
-
-```
-php artisan asset:publish delormejonathan/laravel-js-routing
 ```
 
 ## Usage
