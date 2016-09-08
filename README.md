@@ -1,4 +1,4 @@
-# Javascript Routing for Laravel 5
+# Javascript Routing for Laravel 4/5
 
 This package allows you to access Laravel's routing from your Javascript.
 
@@ -6,15 +6,15 @@ The main feature is the possibility to use it easily in local and production env
 
 In local environment, the JS routes are re-written each request. In production environment, the JS routes are dumped in a static file for better performance.
 
-## Installation
+## Installation Laravel 5
 
 Add this line to your **composer.json** and run `composer update`
 
 ```
-"delormejonathan/laravel-js-routing": "~1.0"
+"delormejonathan/laravel-js-routing": "~2.0"
 ```
 
-Add the provider to **app.php**
+Add the provider to **app.php** to the **aliases** section
 
 ```
 'DelormeJonathan\LaravelJsRouting\LaravelJsRoutingServiceProvider',
@@ -30,6 +30,32 @@ Publish assets to public folder
 
 ```
 php artisan vendor:publish --tag=public --force
+```
+
+## Installation Laravel 4
+
+Add this line to your **composer.json** and run `composer update`
+
+```
+"delormejonathan/laravel-js-routing": "~1.0"
+```
+
+Add the provider to **app.php** to the **aliases** section
+
+```
+'DelormeJonathan\LaravelJsRouting\LaravelJsRoutingServiceProvider',
+```
+
+Add the facade to **app.php** to the **aliases** section
+
+```
+'JSRouter' => 'DelormeJonathan\LaravelJsRouting\Facades\JSRouter',
+```
+
+Publish assets to public folder
+
+```
+php artisan asset:publish delormejonathan/laravel-js-routing
 ```
 
 ## Usage
