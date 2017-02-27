@@ -1,5 +1,5 @@
 {
-    "name": "nteath/laravel-js-routing",
+    "name": "delormejonathan/laravel-js-routing",
     "description": "Laravel 4/5 package to access Routing from Javascript",
     "license": "MIT",
     "keywords": ["laravel", "routing"],
