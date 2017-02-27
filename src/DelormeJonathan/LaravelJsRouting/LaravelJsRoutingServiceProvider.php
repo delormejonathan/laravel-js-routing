@@ -33,14 +33,12 @@ class LaravelJsRoutingServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['jsrouter'] = $this->app->share(function($app)
-		{
-			return new JSRouter;
+		$this->app->singleton('jsrouter', function($app) {
+		    return new JSRouter;
 		});
 
-		$this->app['dump'] = $this->app->share(function($app)
-		{
-			return new Dump;
+		$this->app->singleton('dump', function($app) {
+		    return new Dump;
 		});
 	}
 
